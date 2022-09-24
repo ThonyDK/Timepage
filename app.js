@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
 })
 
 // Hvilken port programmet lytter til
-app.listen(8080, (error) => {
-    console.log("Server is running on port", 8080);
-})
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`)
+});
